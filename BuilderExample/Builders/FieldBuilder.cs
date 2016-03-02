@@ -25,5 +25,10 @@ namespace BuilderExample.Builders
 			this.value = value;
 			return this;
 		}
+
+		public Field build()
+		{
+			return new Field(this);
+		}
 	}
 }
