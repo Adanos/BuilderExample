@@ -1,10 +1,4 @@
-﻿using BuilderExample.Builders;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace BuilderExample
 {
 	class Field
@@ -14,7 +8,7 @@ namespace BuilderExample
 		private readonly string type;
 		private readonly AccessModifier accessModifier;
 
-		public Field(FieldBuilder builder)
+		public Field(Builders.FieldBuilder builder)
 		{
 			this.name = builder.name;
 			this.type = builder.type;
