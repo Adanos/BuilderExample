@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BuilderExample.Builders;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,13 +9,17 @@ namespace BuilderExample
 {
 	class Field
 	{
-		private string key;
-		private string value;
+		private readonly string name;
+		private readonly string value;
+		private readonly string type;
+		private readonly AccessModifier accessModifier;
 
-		public Field(string key, string value)
+		public Field(FieldBuilder builder)
 		{
-			this.key = key;
-			this.value = value;
+			this.name = builder.name;
+			this.type = builder.type;
+			this.accessModifier = builder.accessModifier;
+			this.value = builder.value;
 		}
 	}
 }
