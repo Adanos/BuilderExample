@@ -16,6 +16,21 @@ namespace BuilderExample
 			value = builder.value;
 		}
 
+		public override int GetHashCode()
+		{
+			int value = 17;
+			value = 31 * value + name.GetHashCode();
+			return value;
+		}
+
+		public override bool Equals(object obj)
+		{
+			Field field = obj as Field;
+
+			if (field == null) return false;
+			return name.Equals(field.name);
+		}
+
 		/*internal sealed class Builder
 		{
 			public string name { get; private set; }

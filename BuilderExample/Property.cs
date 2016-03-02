@@ -15,5 +15,20 @@ namespace BuilderExample
 			accessModifier = builder.accessModifier;
 			value = builder.value;
 		}
+
+		public override int GetHashCode()
+		{
+			int value = 17;
+			value = 31 * value + name.GetHashCode();
+			return value;
+		}
+
+		public override bool Equals(object obj)
+		{
+			Property property = obj as Property;
+
+			if (property == null) return false;
+			return name.Equals(property.name);
+		}
 	}
 }

@@ -44,9 +44,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccessModifier.cs" />
+    <Compile Include="Builders\ClassBuilder.cs" />
     <Compile Include="Builders\FieldBuilder.cs" />
     <Compile Include="Builders\MethodBuilder.cs" />
     <Compile Include="Builders\PropertyBuilder.cs" />
+    <Compile Include="Class.cs" />
     <Compile Include="Field.cs" />
     <Compile Include="Method.cs" />
     <Compile Include="Program.cs" />
