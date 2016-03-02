@@ -52,5 +52,10 @@ namespace BuilderExample.Builders
 			methods.Remove(method);
 			return this;
 		}
+
+		public Class build()
+		{
+			return new Class(this);
+		}
 	}
 }
