@@ -10,10 +10,10 @@ namespace BuilderExample
 
 		public Field(Builders.FieldBuilder builder)
 		{
-			this.name = builder.name;
-			this.type = builder.type;
-			this.accessModifier = builder.accessModifier;
-			this.value = builder.value;
+			name = builder.name;
+			type = builder.type;
+			accessModifier = builder.accessModifier;
+			value = builder.value;
 		}
 
 		/*internal sealed class Builder
