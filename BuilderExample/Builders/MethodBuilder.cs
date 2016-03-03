@@ -2,7 +2,7 @@
 
 namespace BuilderExample.Builders
 {
-	sealed class MethodBuilder
+	sealed class MethodBuilder: IBuildable<Method>
 	{
 		public string name { get; private set; }
 		public Dictionary<string, string> parameters { get; private set; }

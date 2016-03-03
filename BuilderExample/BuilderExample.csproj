@@ -50,6 +50,7 @@
     <Compile Include="Builders\PropertyBuilder.cs" />
     <Compile Include="Class.cs" />
     <Compile Include="Field.cs" />
+    <Compile Include="IBuildable.cs" />
     <Compile Include="Method.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

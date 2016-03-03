@@ -2,7 +2,7 @@
 
 namespace BuilderExample.Builders
 {
-	sealed class ClassBuilder
+	sealed class ClassBuilder: IBuildable<Class>
 	{
 		public string name { get; private set; }
 		public ISet<Field> fields { get; private set; }
