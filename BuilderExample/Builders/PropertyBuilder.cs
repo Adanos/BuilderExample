@@ -1,7 +1,7 @@
 ﻿
 namespace BuilderExample.Builders
 {
-	sealed class PropertyBuilder: IBuildable<Property>
+	sealed class PropertyBuilder: Interfaces.IBuildable<Property>
 	{
 		public string name { get; private set; }
 		public string value { get; private set; }

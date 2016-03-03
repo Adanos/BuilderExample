@@ -1,7 +1,7 @@
 ﻿
 namespace BuilderExample.Builders
 {
-	sealed class FieldBuilder: IBuildable<Field>
+	sealed class FieldBuilder: Interfaces.IBuildable<Field>
 	{
 		public string name { get; private set; }
 		public string value { get; private set; }
