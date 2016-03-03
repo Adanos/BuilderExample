@@ -5,13 +5,15 @@ namespace BuilderExample.Builders
 	sealed class ClassBuilder: IBuildable<Class>
 	{
 		public string name { get; private set; }
+		public AccessModifier accessModifier { get; private set; }
 		public ISet<Field> fields { get; private set; }
 		public ISet<Property> properties { get; private set; }
 		public ISet<Method> methods { get; private set; }
 
-		public ClassBuilder(string name)
+		public ClassBuilder(string name, AccessModifier accessModifier)
 		{
 			this.name = name;
+			this.accessModifier = accessModifier;
 			fields = new HashSet<Field>();
 			properties = new HashSet<Property>();
 			methods = new HashSet<Method>();

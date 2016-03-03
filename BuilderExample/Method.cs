@@ -6,11 +6,13 @@ namespace BuilderExample
 	class Method
 	{
 		private readonly string name;
+		private readonly AccessModifier accessModifier;
 		private readonly Dictionary<string, string> parameters;
 
 		public Method(Builders.MethodBuilder builder)
 		{
 			name = builder.name;
+			accessModifier = builder.accessModifier;
 			parameters = builder.parameters;
 		}
 
@@ -35,8 +37,7 @@ namespace BuilderExample
 
 			if (method == null) return false;
 			if (parameters.Count != method.parameters.Count) return false;
-			if (!parameters.Keys.SequenceEqual(method.parameters.Keys)) return false;
-			if (!parameters.Values.SequenceEqual(method.parameters.Values)) return false;
+			if (!parameters.SequenceEqual(method.parameters)) return false;
 
 			return name.Equals(method.name);
 		}

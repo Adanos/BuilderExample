@@ -5,11 +5,13 @@ namespace BuilderExample.Builders
 	sealed class MethodBuilder: IBuildable<Method>
 	{
 		public string name { get; private set; }
+		public AccessModifier accessModifier { get; private set; }
 		public Dictionary<string, string> parameters { get; private set; }
 
-		public MethodBuilder(string name)
+		public MethodBuilder(string name, AccessModifier accessModifier)
 		{
 			this.name = name;
+			this.accessModifier = accessModifier;
 			parameters = new Dictionary<string, string>();
 		}
 
