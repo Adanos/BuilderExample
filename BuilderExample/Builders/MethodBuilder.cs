@@ -5,6 +5,7 @@ namespace BuilderExample.Builders
 	sealed class MethodBuilder: Interfaces.IBuildable<Method>
 	{
 		public string name { get; private set; }
+		public string body { get; private set; }
 		public AccessModifier accessModifier { get; private set; }
 		public Dictionary<string, string> parameters { get; private set; }
 
@@ -24,6 +25,12 @@ namespace BuilderExample.Builders
 		public MethodBuilder removeParameter(string name)
 		{
 			parameters.Remove(name);
+			return this;
+		}
+
+		public MethodBuilder setBody(string body)
+		{
+			this.body = body;
 			return this;
 		}
 

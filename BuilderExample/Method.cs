@@ -6,12 +6,14 @@ namespace BuilderExample
 	class Method
 	{
 		private readonly string name;
+		private readonly string body;
 		private readonly AccessModifier accessModifier;
 		private readonly Dictionary<string, string> parameters;
 
 		public Method(Builders.MethodBuilder builder)
 		{
 			name = builder.name;
+			body = builder.body;
 			accessModifier = builder.accessModifier;
 			parameters = builder.parameters;
 		}
